@@ -21,9 +21,9 @@ function perfectNumbers (n = document.getElementById("input").value) {
         const perfect = [];
 
         for (let index = 0; index < n; index++) {
-        
+            
             if (isPrime((2**index)-1)) {
-                const perfectNumber = (2**(index-1)) * ((2**index) - 1);
+                const perfectNumber = (2**(index-1)) * ((2**index) - 1); // formula de euclides
             
                 if (perfectNumber <= n) {
                     perfect.push(perfectNumber);
