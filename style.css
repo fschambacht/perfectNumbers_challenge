@@ -52,12 +52,13 @@ body {
 
 .section-a__input {
     width: 100px;
-    background: none;
-    border-style: inset ;
-    box-shadow: 0px 10px 10px #000;
+    border-style: inset;
+    border-color: #000;
+    border-radius: 5px;
 }
 
 .section-a__button {
+    font-size: 1.5rem;
     width: 80px;
     height: 40px;
     background-color: #087b47;
