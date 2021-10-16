@@ -1,20 +1,36 @@
-const primeNumber = require('./isPrime');
-
-function perfectNumbers (n) {
-    const perfect = [];
-
-    for (let index = 0; index < n; index++) {
+function isPrime (n) {
+    if (n === 1) {return false}
+    else if (n % 1 === 0 && n % n === 0) {
         
-        if (primeNumber((2**index)-1)) {
-            const perfectNumber = (2**(index-1)) * ((2**index) - 1);
+        for (let index = 2; index < n; index++) {
             
-            if (perfectNumber < n) {
-                perfect.push(perfectNumber);
-            } else {
-                return console.log(perfect)
+            while (n % index === 0) {
+                return false
+            }   
+        } return true
+    }
+}
+
+function perfectNumbers (n = document.getElementById("input").value) {
+    if(n <= 5) {
+        return document.getElementById("section-b__result").innerHTML = `The perfect numbers less than ${n} no exist because perfect numbers are positive integer and start in 6`;
+    } else if (isNaN(n)) {
+        return document.getElementById("section-b__result").innerHTML = `The perfect numbers have to be a number`;
+    } else {
+    
+        const perfect = [];
+
+        for (let index = 0; index < n; index++) {
+        
+            if (isPrime((2**index)-1)) {
+                const perfectNumber = (2**(index-1)) * ((2**index) - 1);
+            
+                if (perfectNumber <= n) {
+                    perfect.push(perfectNumber);
+                } else {
+                    return document.getElementById("section-b__result").innerHTML = `The perfect numbers less than ${n} is: <br> ${perfect}`;
+                }
             }
         }
     }
 }
-
-perfectNumbers(9999999999);

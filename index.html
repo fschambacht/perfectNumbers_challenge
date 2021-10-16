@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Numeros Perfectos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main class="main">
+        <section class="section-a">
+            <h2 class="section-a__title">Perfect <br> Numbers</h2>
+            <p class="section-a__pragraph">Perfect numbers are those equal to the sum of their divisors: 6 can be divided by 1, 2 and 3, and when you sum those numbers, the result is 6. we are going to find the first perfect numbers less than n.</p>
+            <div class="section-a__input-container">
+                <label class="section-a__input-n" for="">Input number n: </label>
+                <input class="section-a__input" id="input">
+                <input class="section-a__button" type="button" value="calculate" onclick="perfectNumbers()">
+            </div>
+        </section>
+        <section class="section-b">
+            <p class="section-b__paragraph" id="section-b__result">Please enter a number</p>
+        </section>
+    </main>
 </body>
-<script src="./NumerosPerfectos.js"></script>
+<script src="./numberPerfect2.js"></script>
 </html>
