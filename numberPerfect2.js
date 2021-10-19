@@ -12,12 +12,11 @@ function isPrime (n) {
 }
 
 function perfectNumbers (n = document.getElementById("input").value) {
-    if(n <= 5) {
-        return document.getElementById("section-b__result").innerHTML = `The perfect numbers less than ${n} no exist because perfect numbers are positive integer and start in 6`;
-    } else if (isNaN(n)) {
+    if(isNaN(n)) {
         return document.getElementById("section-b__result").innerHTML = `The perfect numbers have to be a number`;
+    } else if (n <= 5) {
+        return document.getElementById("section-b__result").innerHTML = `The perfect numbers less than ${n} no exist because perfect numbers are positive integer and start in 6`;
     } else {
-    
         const perfect = [];
 
         for (let index = 0; index < n; index++) {
